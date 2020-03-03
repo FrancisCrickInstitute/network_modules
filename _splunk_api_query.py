@@ -5,14 +5,14 @@ from time import sleep
 import splunklib.results as results
 import splunklib.client as client
 from _crick_splunk_creds import crick_splunk_d
-
-def splunk_api_query(SDOUT, query_string):
-#    crick_splunk_d = {
-#        'host':"splunk.thecrick.org",
+# Create a file called _splunk_creds.py 
+#    splunk_creds_d = {
+#        'host':"hostname.domain",
 #        'port':8089,
 #        'username':'',
 #        'password':'',
 #    }
+def splunk_api_query(SDOUT, query_string):
     service = client.connect(**crick_splunk_d)
     #searchquery_normal = "search * | head 10"
     searchquery_normal = query_string
