@@ -8,6 +8,7 @@ Use -o if environment variables are defined, but you don't wish to use them (e.g
 '''
 from argparse import ArgumentParser
 from getpass import getpass
+import os
 
 def get_creds():
     parser = ArgumentParser(description='Usage:')
@@ -50,9 +51,12 @@ def get_creds():
         ENV_user_pw = getpass('Your Tacacs+ Password: ')
     # SSO Password
     if args.sso_password == True:
-        try:
-            ENV_user_sp = os.environ['PY_USER_SP']
-        except:
+        if args.override == False:
+            try:
+                ENV_user_sp = os.environ['PY_USER_SP']
+            except:
+                ENV_user_sp = getpass('Your SSO Password: ')
+        else:
             ENV_user_sp = getpass('Your SSO Password: ')
         output['sso_password'] = ENV_user_sp
     output['username'] = ENV_user_un
