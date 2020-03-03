@@ -1,3 +1,5 @@
+_jamf_headers.py
+_crick_splunk_creds.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
