@@ -54,3 +54,13 @@ Your Tacacs+ Password:
 Your SSO Password: 
 {'sso_password': 'stdin_tacpass', 'username': 'stin_user', 'tac_password': 'stdin_pass'}
 ```
+# _slack_post
+Post to Slack using oath, allows for local file upload
+
+This script results in two posts to Slack. The first is a direct image upload from a folder local to the script. The second is some text and an image crafted using https://api.slack.com/tools/block-kit-builder. 
+
+The output is as follows:
+
+![Output](https://github.com/guymorrell/slack-post-oath/blob/master/readme.png)
+
+Both images sourced from https://ccsearch.creativecommons.org/search?q=slack&provider&li&lt=commercial&searchBy
