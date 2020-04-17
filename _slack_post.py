@@ -12,7 +12,7 @@ WEBHOOK_URL = slack_settings["WEBHOOK"]
 USEWEBHOOK = slack_settings["USE_WEBHOOK"] # set 1 in ../network_config/slack.json if you can't use OATH (no graph though)
 SLACKCHANNEL = slack_settings["CHANNEL"]
 
-with open("block.json", "rt") as block_f:
+with open("blocks.json", "rt") as block_f:
     data = json.load(block_f)
 
 client = slack.WebClient(token=OATH)
