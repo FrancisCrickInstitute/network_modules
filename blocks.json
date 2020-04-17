@@ -1,0 +1,19 @@
+[
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "I'm posting a Block Kit containing text and an image link to Slack via Oath. I'm not using Incoming Webhooks as I also want to upload a local file"
+		}
+	},
+	{
+		"type": "image",
+		"title": {
+			"type": "plain_text",
+			"text": "Here is an image linked directly from the web",
+			"emoji": true
+		},
+		"image_url": "https://live.staticflickr.com/3196/2999125865_09f394e525.jpg",
+		"alt_text": "Example Image"
+	}
+]
