@@ -12,6 +12,6 @@ def format_mac(mac: str) -> str:
         # convert mac in canonical form (eg. 00:80:41:ae:fd:7e)
         mac = ":".join(["%s" % (mac[i:i+2]) for i in range(0, 12, 2)])
     except:
-        print("format_mac error: INVALID MAC Address: "+mac)
+        print("format_mac error: INVALID MAC Address: -->"+mac+"<--, setting MAC to 'False'")
         mac = False
     return mac
